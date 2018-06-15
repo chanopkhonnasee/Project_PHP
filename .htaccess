@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /PHP_project
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteCond $1 !^(index\.php|assets|css|images|js)
+RewriteRule ^(.*)$ /PHP_project/index.php?/$1 [L]
